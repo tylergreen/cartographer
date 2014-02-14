@@ -11,9 +11,10 @@ angular.module('myApp.controllers', ['google-maps'])
 					  latitude: 45,
 					  longitude: -73
 				  },
-				  zoom: 8
+				  zoom: 5
 				 };
 
+   $scope.locs = [{latitude: 46, longitude: -72}, {latitude: 41, longitude: -78}];								
    $scope.moveUp = function(){ $scope.map.center.latitude += 10 };
    $scope.moveDown = function(){ $scope.map.center.latitude -= 10 };
 

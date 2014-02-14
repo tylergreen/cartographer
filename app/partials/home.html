@@ -9,10 +9,17 @@
 <p>Open <a ng-href="{{FBURL}}/syncedValue">Forge</a> or a <a target="_blank" href="#/">new window</a> to see this input update in real time:</p>
 
 <google-map center="map.center" zoom="map.zoom">
-  <marker coords="{latitude: 45, longitude: -73}"
-          fit="true"
-   >
-  </markers>
+
+<markers models="locs"
+coords = "'self'"
+>
+</markers>
+
+  <polyline path="locs"
+  >
+  </polyline>
+
+
 </google-map>
 <button ng-click="moveUp()">Up!</button>
 <button ng-click="moveDown()">Down!</button>
