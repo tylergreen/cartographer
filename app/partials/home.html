@@ -1,0 +1,18 @@
+<h2>Home</h2>
+
+<p class="status good" ng-show-auth="login">Hello! You are logged in.</p>
+<p class="status" ng-show-auth="logout">Not logged in</p>
+<p class="status error" ng-show-auth="error">{{auth.error}}</p>
+
+<input ng-model="syncedValue" type="text" /> <b>{{syncedValue}}</b>
+
+<p>Open <a ng-href="{{FBURL}}/syncedValue">Forge</a> or a <a target="_blank" href="#/">new window</a> to see this input update in real time:</p>
+
+<google-map center="map.center" zoom="map.zoom">
+  <marker coords="{latitude: 45, longitude: -73}"
+          fit="true"
+   >
+  </markers>
+</google-map>
+<button ng-click="moveUp()">Up!</button>
+<button ng-click="moveDown()">Down!</button>
